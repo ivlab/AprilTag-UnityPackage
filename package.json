@@ -1,0 +1,12 @@
+{
+  "author": "Keijiro Takahashi, Bret Jackson",
+  "dependencies": { "com.unity.burst": "1.8.24" },
+  "description": "AprilTags visual fiducial system developed by the APRIL robotics laboratory at the University of Michigan",
+  "displayName": "AprilTag",
+  "keywords": [ "unity" ],
+  "license": "BSD-2-Clause",
+  "name": "edu.umn.cs.ivlab.apriltag",
+  "unity": "6000.1",
+  "unityRelease": "17f1",
+  "version": "1.0.3"
+}
