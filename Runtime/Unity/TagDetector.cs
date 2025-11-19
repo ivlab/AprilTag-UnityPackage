@@ -122,6 +122,13 @@ public sealed class TagDetector : System.IDisposable
         using var tags = _detector.Detect(_image);
         var tagCount = tags.Length;
 
+        _detectedTagInfos.Clear();
+        for (var i = 0; i < tagCount; i++)
+        {
+            var tag = tags[i];
+            _detectedTagInfos.Add(new TagInfo(tag.ID, tag.Center, tag.Corner1, tag.Corner2, tag.Corner3, tag.Corner4));
+        }
+
         // Convert the detector output into a NativeArray to make them
         // accessible from the pose estimation job.
         using var jobInput = new NativeArray<PoseEstimationJob.Input>
